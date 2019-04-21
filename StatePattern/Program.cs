@@ -10,6 +10,17 @@ namespace StatePattern
     {
         static void Main(string[] args)
         {
+
+            Hero hero = new Hero();
+            hero.HP = 100;
+            for (int i=100; i>0; i-=5)
+            {
+                hero.HP = i;
+                Console.WriteLine("HP: " + hero.HP 
+                    + "\t" + "Speed: " + hero.Speed().ToString() 
+                    + "\t" + "Accuracy: " + hero.AccuracyRate().ToString() 
+                    + "\t" + "Critical: " + hero.CriticalRate().ToString());
+            }
         }
     }
 }
